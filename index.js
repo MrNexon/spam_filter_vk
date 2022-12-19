@@ -1,5 +1,14 @@
 const VkBot = require('node-vk-bot-api');
 
+process.on('uncaughtException', function (err) {
+    console.error(err);
+});
+
+process.on('unhandledRejection', function (err) {
+    console.error(err);
+});
+
+
 const TOKEN = 'vk1.a.wi1PZPq3wts8vnDryyNzkiRuKjmJMTFFIkWe8kk1PX3IvwkFjIe1DlEgeTMBIOolnHBexKCMWqhVqnsog2Fc-EEyaAMnAPR8kIBEs0yGss0pwNmMiyDUkDIkHWjBGGLRYB3b04u5kfllgSYad9z7MoBpgy9F45vdj94BpK4k0acBIT7oQVpPLs5UJED3kPToLfbSHHEJejdglh-t3xIC6A';
 const bot = new VkBot({
     token: TOKEN,
